@@ -346,6 +346,7 @@ const main = async() => {
                         	device.set(command).then((data) => {
                             	debug("set device status completed", data);
                         	});
+				TuyaDevice.disconnectAll();
                     	}
                     	break;
                 	case "color":
@@ -354,6 +355,7 @@ const main = async() => {
                     	device.setColor(color).then((data) => {
                         	debug("set device color completed", data);
                     	});
+				TuyaDevice.disconnectAll();
                     	break;
             	}
 
